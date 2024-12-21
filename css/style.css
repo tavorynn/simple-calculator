@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+/* SCrollbar */
+
+  *::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #7a7f8b; 
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #333;
+    transform: scale(1.5);
+  }
+
+
+  body {
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column; /* Elemen ditumpuk secara vertikal */
+    justify-content: center; /* Tengah vertikal */
+    align-items: center; /* Tengah horizontal */
+    height: 100vh; /* Pastikan tinggi badan mencakup seluruh layar */
+  }
+
+.container {
+  position: relative; /* Mengatur Agar Responsive */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calculator {
+  display: grid; /* Mengatur display menjadi grid */
+  grid-gap: 20px; /* Gap anatara column/row 20px */
+  width: 900px;
+  padding: 30px; 
+  border-radius: 20px; 
+  box-shadow: 0 0 30px #333;
+}
+
+
+body {
+  height: 100vh;
+}
+
+
+/* Particle JS */
+  #particles-js {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100% ;
+  }
+
+  .particles {
+    background-color: #f3f3f3;
+  }
+
+  .particles.dark {
+    background-color: #070707;
+  }
+
+/* Display Screen */
+
+  .display-screen {
+    width: 470px;
+    height: 180px;
+    grid-column: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #display {
+    height: 180px;
+    padding: 20px 0;
+    display: flex;
+    align-items: flex-end;
+    font-size: 30px;
+    overflow-x: auto;
+    font-weight: 600;
+    font-size: 36px;
+  }
+
+/* Button */
+  button {
+    height: 60px;
+    width: 70px;
+    border: 0;
+    border-radius: 50px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-family: "Rubik", sans-serif;
+  }
+
+  .buttons {
+    max-width: 450px;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    grid-column: 1;
+    grid-row: 2;
+    margin-right: 30px;
+    margin-bottom: -30px;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+
+
+  .zero {
+    width: 150px;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+/* Toggle Swicth Theme */
+
+  .theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+
+  .theme-toggler.active {
+    color: #333;
+  }
+
+
+  .theme-toggler.active::before {
+    background-color: #fff;
+  }
+
+  .theme-toggler::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+  }
+
+/* light Theme */
+
+  .calculator {
+    background-color: rgba(255, 255, 255, 0.5); /* Warna latar belakang semi-transparan */
+  }
+
+  .calculator #display {
+    color: #332e2a;
+  }
+
+  .calculator button.btn-number {
+    background-color: #c7c9c6;
+    color: #000000;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .calculator button.btn-operator1 {
+    background-color: #596174;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .calculator button.btn-operator2 {
+    background-color: #b2ccfd;
+    color: #595959;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+
+  .calculator button.btn-operator3 {
+    background-color: #6b768a;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .calculator button.btn-equal {
+    background-color: #adf9e7;
+    color: #000;
+  }
+
+  .calculator .history-container {
+    color: #000;
+    transition: none;
+  }
+
+/* Dark Theme */
+
+  .calculator.dark {
+    background-color: rgba(0, 0, 0, 0.4); /* Warna latar belakang semi-transparan */
+  }
+
+  .calculator.dark #display {
+    color: #f8fafb;
+  }
+
+  .calculator.dark button.btn-number {
+    background-color: #505050;
+    color: #f8fafb;
+  }
+
+  .calculator.dark button.btn-operator1 {
+    background-color: #ff9500;
+    color: #ffffff;
+
+  }
+
+  .calculator.dark button.btn-operator2 {
+    background-color: #6b768a;
+    color: #f8f8f8;
+  }
+
+  .calculator.dark button.btn-operator3 {
+    background-color: #d4d4d2;
+    color: #1c1c1c;
+  }
+
+  .calculator.dark button.btn-equal {
+    background-color: #f8ac36;
+    color: #ffffff;
+  }
+
+  .calculator.dark .history-container {
+    color: #fff;
+  }
+
+  .calculator.dark .copyr p {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+/* Sidebar */
+
+  .history-container {
+    margin-top: 20px;
+    width: 290px;
+    height: 560px;
+    padding: 20px;
+    grid-column: 2;
+    grid-row: span 3;
+    border-left: 2px solid;
+  }
+
+  .history {
+    padding: 20px;
+    height: 100%;
+    height: auto; /* Set height to auto */
+    max-height: 500px; /* Set maximum height */
+    overflow-y: auto; /* Tampilkan bilah gulir secara otomatis jika konten melebihi batas */
+  }
+
+  .history p {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  #history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  #history-list li {
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 0.1px solid ;
+  }
+
+
+/* Phone */
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+
+  .calculator{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+  }
+  
+  .calculator, .calculator.dark {
+  background-color: rgba(0, 0, 0, 0);
+  }
+
+  .display-screen {
+    width: 310px;
+  }
+  
+  #display {
+    margin-right: -20px;
+  }
+
+  .calculator button.btn-operator2 {
+    position: absolute;
+    left: 0;
+    z-index: -1000;
+  }
+
+  .buttons {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+
+  .history-container{
+    position: absolute;
+    right: 0;
+    z-index: -1000;
+  }
+
+}
+
+
+/* Phone Mini Display */
+@media only screen and (min-width: 320px) and (max-height: 560px) and (orientation: portrait) {
+
+  .display-screen {
+    height: 100px;
+  }
+
+  #display {
+    height: auto;
+  }
+
+}
+
+
+/* Phone & Tab Landscape */
+@media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .calculator {
+    max-width: 520px;
+
+  }
+
+  .display-screen{
+    width : 298px;
+    height: 50px;
+  }
+
+  #display {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  button {
+    height: 30px;
+    width: 38px;
+    font-size: 12px;
+  }
+  
+  .buttons {
+    margin-bottom: -30px;
+    margin-right: 0;
+  }
+
+  .calculator button.btn-number, 
+  .calculator button.btn-operator1 {
+    font-size: 16px;
+  }
+
+  .zero {
+    width: 88px;
+    padding-left: 15px;
+  }
+
+  .history-container {
+    height: 250px;
+    width: 180px;
+    padding: 0;
+    padding-right: 20px;
+  }
+
+  .history {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  
+  .history p {
+    font-size: 16px;
+  }
+  
+  #history-list li {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+}
+
+
+/* Tablet Portrait */
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+
+  .calculator{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calculator, .calculator.dark {
+    background-color: rgba(0, 0, 0, 0);
+    }  
+
+  .display-screen {
+    margin-right: -40px;
+  }
+
+  #display {
+    max-width: 310px;
+  }
+
+
+  .buttons {
+    margin-left: 300px;
+  }
+
+
+  .history-container{
+    position: relative;
+    right: -100000px;
+  }
+
+}
+
+
+/* Desktop Reso Rendah */
+@media only screen and (min-width: 1024px) and (max-width: 1480px) {
+ 
+  .calculator {
+    max-width: 720px;
+
+  }
+
+  .display-screen{
+    width : 376px;
+    height: 144px;
+  }
+
+  #display {
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-right: -20px;
+  }
+
+  button {
+    height: 48px;
+    width: 56px;
+    font-size: 16px;
+  }
+  
+  .buttons {
+    margin-bottom: -30px;
+    margin-right: 0;
+  }
+
+  .calculator button.btn-number, 
+  .calculator button.btn-operator1 {
+    font-size: 22px;
+  }
+
+  .zero {
+    width: 125px;
+    padding-left: 24px;
+  }
+
+  .history-container {
+    height: 448px;
+    width: 232px;
+    padding: 0;
+  }
+
+  .history {
+    max-height: 440px;
+    overflow-y: auto;
+  }
+  
+  .history p {
+    font-size: 16px;
+  }
+
+  #history-list li {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+
+}
+
+.copyr {
+  position: fixed; /* Tetap di posisi yang sama meskipun halaman di-scroll */
+  bottom: 0; /* Tempatkan di bawah */
+  left: 0; /* Tempatkan di kiri */
+  padding: 20px; /* Tambahkan padding agar tidak mepet */
+}
+
+.copyr p {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
