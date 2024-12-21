@@ -43,10 +43,10 @@ The **Simple Calculator** is a sleek, responsive web-based calculator that combi
 ## Screenshots  
 
 ### ☀️ Light Mode  
-![Calculator in Light Mode](images/light.png)  
+![Calculator in Light Mode](images/light)  
 
 ### 🌙 Dark Mode  
-![Calculator in Dark Mode](images/dark.png)  
+![Calculator in Dark Mode](images/dark)  
 
 <br>
 
@@ -66,7 +66,7 @@ Follow these steps to use the project:
 
 3. Run the application by opening `index.html` in your browser.
 
-<br.
+<br>
 
 ## Technologies Used  
 
