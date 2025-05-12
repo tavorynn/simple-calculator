@@ -1,7 +1,7 @@
 
 # Simple Calculator  
 
-### <a href="https://spapirecalc.netlify.app" target="_blank" rel="noopener noreferrer">**Use the Website (spapirecalc.netlify.app)**</a> 
+### <a href="https://calc.shafirza.my.id/" target="_blank" rel="noopener noreferrer">**Use the Website (calc.shafirza.my.id)**</a> 
 
 The **Simple Calculator** is a sleek, responsive web-based calculator that combines basic and scientific functionalities with a modern design. Whether you're performing simple arithmetic or advanced calculations, this tool is designed to provide a seamless user experience.  
 
