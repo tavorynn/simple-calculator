@@ -56,7 +56,7 @@ Follow these steps to use the project:
 
 1. Clone the repository to your local machine:  
    ```bash  
-   git clone https://github.com/spapire/simple-calculator.git  
+   git clone https://github.com/tavorynn/simple-calculator.git  
    ```  
 
 2. Open the project directory:  
